@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         Challenge1.route: (context) => const Challenge1(title: "Challenge 1"),
         Challenge2.route: (context) => const Challenge2(title: "Challenge 2"),
         Challenge3.route: (context) => const Challenge3(title: "Challenge 3"),
+        Challenge4.route: (context) => const Challenge4(title: "Challenge 4"),
       },
     );
   }
@@ -64,6 +65,16 @@ class HomePage extends StatelessWidget {
             child: const Card(
               child: ListTile(
                 title: Text("Challenge 3"),
+              ),
+            ),
+          ),
+
+          // Challenge 4
+          InkWell(
+            onTap: () => Navigator.pushNamed(context, Challenge4.route),
+            child: const Card(
+              child: ListTile(
+                title: Text("Challenge 4"),
               ),
             ),
           ),
