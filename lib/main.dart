@@ -30,7 +30,30 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: const Center(),
+      body: Align(
+        alignment: Alignment.topCenter,
+        child: Container(
+          margin: const EdgeInsets.all(20),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: Colors.orange,
+              width: 10,
+            ),
+          ),
+          width: 280,
+          height: 280,
+          child: const Text(
+            "H",
+            style: TextStyle(
+              color: Colors.orange,
+              fontSize: 180,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
