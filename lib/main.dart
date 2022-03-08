@@ -1,5 +1,5 @@
-import 'package:container_challenge/pages/src/challenge1.dart';
 import 'package:flutter/material.dart';
+
 import '../pages/pages.dart';
 
 void main() {
@@ -13,13 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Challenge',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
+      theme: ThemeData.dark(),
       initialRoute: '/',
       routes: {
         HomePage.route: (context) => const HomePage(),
         Challenge1.route: (context) => const Challenge1(title: "Challenge 1"),
+        Challenge2.route: (context) => const Challenge2(title: "Challenge 2"),
       },
     );
   }
@@ -38,11 +37,22 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          // Challenge 1
           InkWell(
             onTap: () => Navigator.pushNamed(context, Challenge1.route),
             child: const Card(
               child: ListTile(
                 title: Text("Challenge 1"),
+              ),
+            ),
+          ),
+
+          // Challenge 2
+          InkWell(
+            onTap: () => Navigator.pushNamed(context, Challenge2.route),
+            child: const Card(
+              child: ListTile(
+                title: Text("Challenge 2"),
               ),
             ),
           ),
